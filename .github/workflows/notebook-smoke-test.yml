@@ -1,0 +1,30 @@
+name: Notebook smoke test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  execute-notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Execute notebook workflow
+        run: |
+          jupyter nbconvert --to notebook --execute --inplace notebooks/01_data_preparation.ipynb --ExecutePreprocessor.timeout=300
+          jupyter nbconvert --to notebook --execute --inplace notebooks/02_random_forest_training_evaluation.ipynb --ExecutePreprocessor.timeout=300
+          jupyter nbconvert --to notebook --execute --inplace notebooks/03_q_learning_training.ipynb --ExecutePreprocessor.timeout=300
+          jupyter nbconvert --to notebook --execute --inplace notebooks/04_pricing_policy_evaluation.ipynb --ExecutePreprocessor.timeout=300

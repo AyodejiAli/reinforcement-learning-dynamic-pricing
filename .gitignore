@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local environment files
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated pipeline artifacts
+artifacts/*
+!artifacts/.gitkeep
+
+# Build, coverage, and temporary outputs
+build/
+dist/
+htmlcov/
+.coverage
+*.log
+*.tmp

@@ -40,6 +40,8 @@ The local file is `dynamic_pricing.csv` and contains 1,000 observations with the
 │   ├── METHODOLOGY.md
 │   ├── REPRODUCIBILITY.md
 │   └── RESULTS.md
+├── report/
+│   └── Reinforcement Learning CA Report.pdf
 ├── artifacts/                 # Generated locally; ignored by Git
 ├── .github/workflows/
 │   └── notebook-smoke-test.yml
@@ -162,6 +164,7 @@ This repository is intended for academic demonstration and should not be used di
 - [Methodology](docs/METHODOLOGY.md)
 - [Reproducibility guide](docs/REPRODUCIBILITY.md)
 - [Results and interpretation](docs/RESULTS.md)
+- [Complete project report](report/Reinforcement%20Learning%20CA%20Report.pdf)
 - [Contributing guide](CONTRIBUTING.md)
 
 ## Publishing the repository to GitHub
@@ -178,8 +181,3 @@ git push -u origin main
 ```
 
 Run `git status --ignored` before the first push if you want to confirm that `.idea/`, local environments, notebook checkpoints, and generated `artifacts/` files are excluded.
-
-## Software licence
-
-No software licence has been assigned to the project code. The dataset's CC0 status does not automatically license the project code. Add an appropriate software licence before inviting external reuse.
-#
